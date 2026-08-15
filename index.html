@@ -150,6 +150,61 @@
         color: #555;
         margin-top: 10px;
     }
+     /* FOOTER */
+    footer {
+        background-color: #d9d9d9;
+        padding: 40px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+    .footer-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .footer-columna {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        gap: 10px;
+    }
+    .footer-columna h3 {
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+    }
+    .footer-caja {
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-color: #fff;
+        padding: 8px 12px;
+        margin: 0;
+        text-align: left;
+    }
+    .footer-iconos{
+        display: flex;
+        gap: 10px;
+    }
+    .footer-icono {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+    .footer-linea {
+        border: none;
+        border-top: 1px solid #000;
+        margin: 30px 0 20px 0;
+    }
+
+    .footer-copyright {
+        width: fit-content;
+    }
+
   </style>
 </head>
 <body>
@@ -230,10 +285,39 @@
           </div>
       </section>
   </main>
-
+ <!-- Aquí va el footer-->
   <footer>
-      <!-- Aquí va el footer-->
+    <div class="footer-contenido">
+        <div class="footer-logo">
+            <div class="placeholder-imagen">LOGO</div>
+            <p class="footer-caja">LOGO</p>
+        </div>
+        <div class="footer-columna">
+            <h3>MENU</h3>
+            <p class="footer-caja">Link 1</p>
+            <p class="footer-caja">Link 2</p>
+            <p class="footer-caja">Link 3</p>
+        </div>
+        <div class="footer-columna">
+            <h3>CONTACTO</h3>
+            <p class="footer-caja">Dato 1</p>
+            <p class="footer-caja">Dato 2</p>
+            <p class="footer-caja">Dato 3</p>
+        </div>
+        <div class="footer-columna">
+            <h3>SIGUENOS</h3>
+            <div class="footer-iconos">
+                <div class="placeholder-imagen footer-icono">X</div>
+                <div class="placeholder-imagen footer-icono">x</div>
+                <div class="placeholder-imagen footer-icono">x</div>
+            </div>
+        </div>
+    </div>
+    <hr class="footer-linea">
+    <p class="footer-caja footer-copyright">© 2026 Los chinos hermanos. Todos los derechos reservados.</p>
+     
   </footer>
+  
 
   <!-- JavaScript -->
   <!-- SCRIPT DE INTERACTIVIDAD -->
