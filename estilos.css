@@ -1,0 +1,137 @@
+:root {
+  /* Color Variables */
+  --color-bg-main: #f8f9fa;
+  --color-bg-white: #fff;
+  --color-bg-hover: #e9ecef;
+  
+  --color-border: #ccc;
+  --color-border-light: #ddd;
+  --color-focus: #0066cc;
+  
+  --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MARK: HEADER */
+
+.main-header {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 80px; /* Reduced to standard header height */
+  grid-template-columns: 200px 1fr 200px;
+  align-items: center;
+  background-color: var(--color-bg-main); /* Clean backdrop (swap back to red if preferred) */
+  padding: 0 20px;
+  box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+/* --- LOGO --- */
+.main-header-logo {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.main-header-logo img {
+  display: block;
+  max-height: 100%; /* Prevents logo from touching grid edges */
+  width: auto;
+  object-fit: contain; /* Preserves natural aspect ratio without distortion */
+}
+
+/* --- SEARCH BAR --- */
+.main-header-search {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  justify-self: center; /* Centers the search bar inside the middle grid column */
+}
+
+/* Style the text input */
+.main-header-search input[type="text"] {
+  display: block;
+  flex: 1; /* Takes up all available space */
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-right: none; /* Merges border with button */
+  border-radius: 20px 0 0 20px; /* Rounds left corners only */
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Style the magnifying glass button */
+.main-header-search button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-left: none; /* Merges border with input */
+  border-radius: 0 20px 20px 0; /* Rounds right corners only */
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.main-header-search button:hover {
+  background-color: var(--color-bg-hover);
+}
+
+/* Keep borders matching on focus */
+.main-header-search:focus-within input[type="text"],
+.main-header-search:focus-within button {
+  border-color: var(--color-focus);
+}
+
+/* --- BUTTONS / ACTIONS --- */
+.main-header-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px; /* Adds consistent spacing between action buttons */
+}
+
+.main-header-buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.main-header-buttons button:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.main-header-buttons button:active {
+  transform: scale(0.95);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 650px) {
+  .main-header {
+    grid-template-columns: auto 1fr auto; /* Collapses fixed side widths on small screens */
+    grid-template-rows: 60px;
+  }
+  .main-header-search {
+    margin: 0 10px;
+  }
+}
