@@ -519,41 +519,110 @@ body {
         gap: 15px;
     }
 }
+/* MARK: FOOTER */
 
-<footer>
-    <div class="main-footer-content">
-        <div class="footer-brand">
-            <p>LOGO</p>
-            <p>LOGO</p>
-        </div>
+footer {
+    background-color: var(--color-bg-main);
+    border-top: 1px solid var(--color-border-light);
+    color: #333;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
 
-        <div>
-            <h3>MENU</h3>
-            <p>Link 1</p>
-            <p>Link 2</p>
-            <p>Link 3</p>
-        </div>
+/* --- GRID DE CONTENIDO DE FOOTER --- */
+.main-footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--color-border-light);
+}
 
-        <div>
-            <h3>CONTACTO</h3>
-            <p>Dato 1</p>
-            <p>Dato 2</p>
-            <p>Dato 3</p>
-        </div>
+.main-footer-content h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 6px;
+    display: inline-block;
+}
 
-        <div>
-            <h3>SIGUENOS</h3>
-            <div class="footer-social">
-                <p>X</p>
-                <p>X</p>
-                <p>X</p>
-            </div>
-        </div>
-    </div>
+.main-footer-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
 
-    <p>© 2026 Los chinos hermanos. Todos los derechos reservados.</p>
-</footer>
-</body>
+.main-footer-content p:hover {
+    color: var(--color-focus);
+}
 
-</html>
+/* --- SECCIÓN DE LOGO / MARCA --- */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* --- SECCIÓN DE REDES SOCIALES --- */
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.footer-social p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-white);
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.footer-social p:hover {
+    background-color: var(--color-bg-hover);
+    transform: translateY(-2px);
+}
+
+/* --- COPYRIGHT / BOTTOM --- */
+footer > p:last-child {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+/* --- AJUSTES RESPONSIVOS --- */
+@media (max-width: 650px) {
+    footer {
+        padding: 40px 15px 20px;
+    }
+
+    .main-footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .main-footer-content h3 {
+        display: block;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
 
