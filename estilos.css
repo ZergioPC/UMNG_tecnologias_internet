@@ -519,3 +519,41 @@ body {
         gap: 15px;
     }
 }
+
+<footer>
+    <div class="main-footer-content">
+        <div class="footer-brand">
+            <p>LOGO</p>
+            <p>LOGO</p>
+        </div>
+
+        <div>
+            <h3>MENU</h3>
+            <p>Link 1</p>
+            <p>Link 2</p>
+            <p>Link 3</p>
+        </div>
+
+        <div>
+            <h3>CONTACTO</h3>
+            <p>Dato 1</p>
+            <p>Dato 2</p>
+            <p>Dato 3</p>
+        </div>
+
+        <div>
+            <h3>SIGUENOS</h3>
+            <div class="footer-social">
+                <p>X</p>
+                <p>X</p>
+                <p>X</p>
+            </div>
+        </div>
+    </div>
+
+    <p>© 2026 Los chinos hermanos. Todos los derechos reservados.</p>
+</footer>
+</body>
+
+</html>
+
